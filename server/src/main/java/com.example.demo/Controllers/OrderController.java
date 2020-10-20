@@ -8,13 +8,9 @@ import com.example.demo.Services.Classes.OrderClass.OrderStatus;
 import com.example.demo.Services.ServiceRealisation.CustomerService.CustomerService;
 import com.example.demo.Services.ServiceRealisation.DirectorService.DirectorService;
 import com.example.demo.Services.ServiceRealisation.OrderService.OrderService;
-import com.example.demo.Services.ServiceRealisation.SalesControllerService.SCService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Random;
 
@@ -27,8 +23,10 @@ public class OrderController
     private final CustomerService customerService;
 
 
-    private Order updateInformation(Order order, Director director, Customer customer)
+    private void updateInformation(Order order, String customerName)
     {
+        Director director = directorService.getDirector();
+        Customer customer = customerService.getCustomerByName(customerName);
         if(order.getStatus()==OrderStatus.isAccepted)
         {
             System.out.println(customer.toString());
@@ -40,21 +38,17 @@ public class OrderController
             order.setDirector(director);
             directorService.updateDirectorInformation(director);
             order.setStatus(OrderStatus.isAccepted);
-            return order;
         }
         else
         {
             System.out.println("We can not sell you this amount of wood.");
             order.setStatus(OrderStatus.isRejected);
-            //Customer customer = order.getCustomer();
             System.out.println(customer.toString());
-            //Director director = order.getDirector();
             System.out.println(director.toString());
             directorService.woodControl(director, customer.getRequest());
             order.setDirector(director);
             directorService.updateDirectorInformation(director);
             System.out.println(director.toString());
-            return order;
         }
     }
 
@@ -66,17 +60,25 @@ public class OrderController
         this.directorService=directorService;
     }
     @PostMapping
-    public ResponseEntity<Boolean> complete(@RequestParam String directorName, @RequestParam int woodAmount, @RequestParam int balance, @RequestParam String customerName, @RequestParam int customerAge, @RequestParam int customerRequest)
+    public ResponseEntity<Boolean> processing(@RequestParam String customerName, @RequestParam int customerAge, @RequestParam int customerRequest)
     {
-        Director director = directorService.createDirector(directorName, woodAmount, balance);
-        System.out.println(director.getBalance()+" "+director.getWoodAmount());
-        Customer customer = customerService.createCustomer(customerName, customerAge, customerRequest);
+        Customer customer = customerService.createCustomer(customerName,customerAge,customerRequest);
+        Director director = directorService.getDirector();
         Order order = orderService.decisionMaking(director, customer);
 
-
+        orderService.setCustomer(order, customer);
+        updateInformation(order,customer.getName());
+        return ResponseEntity.ok(orderService.checkIfIsCompleted(order));
+    }
+    /*@GetMapping
+    public ResponseEntity<Boolean> completing(@RequestParam String customerName, @RequestParam String directorName, @RequestParam int customerAge, @RequestParam int customerRequest)
+    {
+        Customer customer = customerService.createCustomer(customerName, customerAge, customerRequest);
+        Order order = orderService.decisionMaking()
         orderService.setCustomer(order, customer);
         updateInformation(order, director, customer);
 
         return ResponseEntity.ok(orderService.checkIfIsCompleted(order));
     }
+*/
 }

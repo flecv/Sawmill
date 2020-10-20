@@ -17,7 +17,7 @@ public class CustomerService {
     {
         Customer customer = new Customer(name, age, request);
         repo.save(customer);
-        return new Customer(name,age,request);
+        return customer;
     }
 
     public Customer getCustomerByName(String name)

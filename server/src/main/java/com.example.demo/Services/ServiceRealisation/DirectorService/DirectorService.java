@@ -51,4 +51,9 @@ public class DirectorService
         return report;
     }
 
+    public Director getDirector()
+    {
+        Director director = repo.getDirectorByName("Konrad");
+        return director;
+    }
 }

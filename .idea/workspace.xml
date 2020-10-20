@@ -3,8 +3,44 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:WoodControl" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fbc98e2-3bdb-4062-ba84-35bd7fd3f9df" name="Default Changelist" comment="" />
+    <list default="true" id="6fbc98e2-3bdb-4062-ba84-35bd7fd3f9df" name="Default Changelist" comment="Learning Spring Boot">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/demo/CustomerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/demo/CustomerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/demo/MainClasses/SalesController/SalesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/CustomerMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/CustomerMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/DirectorMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/DirectorMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/OrderMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/OrderMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/example/demo/Methods/SCMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Controllers/DirectorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Controllers/DirectorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Controllers/SCController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/Classes/OrderClass/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/Classes/OrderClass/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/Classes/Repository/SCRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/Classes/SalesControllerClass/SalesController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/CustomerService/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/CustomerService/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/DirectorService/DirectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/DirectorService/DirectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/OrderService/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/OrderService/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com.example.demo/Services/ServiceRealisation/SalesControllerService/SCService.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +57,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -32,6 +71,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1iEWHsQLORbgcDwQzAJkf2W8dE9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,7 +141,31 @@
       <option name="presentableId" value="Default" />
       <updated>1601473146726</updated>
     </task>
+    <task id="LOCAL-00001" summary="Learning Spring Boot">
+      <created>1602082237481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602082237481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Learning Spring Boot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learning Spring Boot" />
   </component>
   <component name="WindowStateProjectService">
     <state x="280" y="3" key="#Project_Structure" timestamp="1601885535154">
@@ -116,22 +180,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="1034" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1601921367373" />
-    <state width="1556" height="183" key="GridCell.Tab.0.bottom" timestamp="1602082298881">
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603086194329">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="183" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602082298881" />
-    <state width="1556" height="183" key="GridCell.Tab.0.center" timestamp="1602082298880">
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1603086194329" />
+    <state width="1556" height="183" key="GridCell.Tab.0.bottom" timestamp="1603225751659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="183" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602082298880" />
-    <state width="1556" height="183" key="GridCell.Tab.0.left" timestamp="1602082298880">
+    <state width="1556" height="183" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1603225751659" />
+    <state width="1556" height="183" key="GridCell.Tab.0.center" timestamp="1603225751659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="183" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602082298880" />
-    <state width="1556" height="183" key="GridCell.Tab.0.right" timestamp="1602082298880">
+    <state width="1556" height="183" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1603225751659" />
+    <state width="1556" height="183" key="GridCell.Tab.0.left" timestamp="1603225751659">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1556" height="183" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602082298880" />
+    <state width="1556" height="183" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1603225751659" />
+    <state width="1556" height="183" key="GridCell.Tab.0.right" timestamp="1603225751659">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1556" height="183" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1603225751659" />
     <state width="1556" height="270" key="GridCell.Tab.1.bottom" timestamp="1602084220683">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -148,6 +216,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1556" height="270" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1602084220683" />
+    <state x="392" y="149" key="Vcs.Push.Dialog.v2" timestamp="1602082350863">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="149" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1602082350863" />
     <state x="616" y="207" key="chooseDestDirectoryDialog" timestamp="1601919959269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

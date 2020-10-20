@@ -1,6 +1,5 @@
 package com.example.demo.Services.Classes.OrderClass;
 
-import com.example.demo.Services.Classes.SalesControllerClass.SalesController;
 import com.example.demo.Services.Classes.CustomerClass.Customer;
 import com.example.demo.Services.Classes.DirectorClass.Director;
 
@@ -10,10 +9,9 @@ public class Order
     private int request;
     private Customer customer;
     private Director director;
-    private SalesController salesController;
     private OrderStatus status = OrderStatus.isPreparing;
 
-    public Order() {
+    public Order(String directorName, int woodAmount, int balance, String customerName, int customerAge, int customerRequest) {
     }
 
     public Order(int request) {
@@ -50,13 +48,5 @@ public class Order
 
     public void setDirector(Director director) {
         this.director = director;
-    }
-
-    public SalesController getSalesController() {
-        return salesController;
-    }
-
-    public void setSalesController(SalesController salesController) {
-        this.salesController = salesController;
     }
 }

@@ -8,27 +8,29 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 public class DirectorMethod {
 
-    public Director createDirector(int woodAmount, int balance) {
+    public Director createDirector() {
         String address = "http://localhost:8082/director/";
         RestTemplate restTemp = new RestTemplate();
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(address).
                 queryParam("name", "Konrad").
-                queryParam("woodAmount", woodAmount).
-                queryParam("balance", balance);
-
-        Director director = new Director();
-        director.setName("Kingston");
-        director.setBalance(balance);
-        director.setWoodAmount(woodAmount);
+                queryParam("woodAmount", 100).
+                queryParam("balance", 0);
 
         System.out.println("Director create");
         HttpEntity<Director> response = restTemp.exchange(builder.toUriString(), HttpMethod.POST, null, Director.class);
         System.out.println(response.getBody());
-
-        return director;
+        return response.getBody();
     }
 
+    public void getDirector() {
+        String address = "http://localhost:8082/director/";
+        RestTemplate restTemp = new RestTemplate();
+
+        System.out.println("Director get");
+        HttpEntity<Director> response = restTemp.exchange(address, HttpMethod.GET, null, Director.class);
+        System.out.println(response.getBody());
+    }
 
     public void directorReport()
     {

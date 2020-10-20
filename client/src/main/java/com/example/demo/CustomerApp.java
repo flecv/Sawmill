@@ -1,11 +1,10 @@
 package com.example.demo;
 
+import com.example.demo.MainClasses.Customer.Customer;
 import com.example.demo.MainClasses.Director.Director;
-import com.example.demo.MainClasses.Order.OrderStatus;
 import com.example.demo.Methods.CustomerMethod;
 import com.example.demo.Methods.DirectorMethod;
 import com.example.demo.Methods.OrderMethod;
-import com.example.demo.Methods.SCMethod;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -16,17 +15,14 @@ public class CustomerApp
         CustomerMethod cusMeth = new CustomerMethod();
         DirectorMethod dirMeth = new DirectorMethod();
         OrderMethod orderMeth = new OrderMethod();
-        SCMethod SCMethod = new SCMethod();
 
-     //   cusMeth.createCustomer();
-        Director director = dirMeth.createDirector(100, 100);
+        Customer customer = cusMeth.createCustomer();
+        Director director = dirMeth.createDirector();
         //System.out.println("Director wood amount is "+director.getWoodAmount());
 
 
-        orderMeth.createOrder("Konrad", director.getWoodAmount(), director.getBalance(), "Miho", 30, 30);
+        orderMeth.createOrder(director, customer);
         dirMeth.directorReport();
-       /* SCMethod.SCReport();*/
-        orderMeth.createOrder("Konrad", director.getWoodAmount(), director.getBalance(), "Naomi", 40, 100);
       //  dirMeth.directorReport();
        /* orderMeth.createOrder("Mei", 75);
 

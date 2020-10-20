@@ -1,5 +1,7 @@
 package com.example.demo.Methods;
 
+import com.example.demo.MainClasses.Customer.Customer;
+import com.example.demo.MainClasses.Director.Director;
 import com.example.demo.MainClasses.MapModule;
 import com.example.demo.MainClasses.Order.OrderStatus;
 import org.springframework.http.HttpEntity;
@@ -8,18 +10,18 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 public class OrderMethod {
-    public void createOrder(String directorName, int woodAmount, int balance, String customerName, int customerAge, int customerRequest)
+    public void createOrder(Director director, Customer customer)
     {
         final String address = "http://localhost:8082/order/";
         RestTemplate restTemp = new RestTemplate();
 
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(address).
-                queryParam("directorName", directorName).
-                queryParam("woodAmount", woodAmount).
-                queryParam("balance", balance).
-                queryParam("customerName", customerName).
-                queryParam("customerAge", customerAge).
-                queryParam("customerRequest", customerRequest);
+                queryParam("directorName", director.getName()).
+                queryParam("woodAmount", director.getWoodAmount()).
+                queryParam("balance", director.getBalance()).
+                queryParam("customerName", customer.getName()).
+                queryParam("customerAge", customer.getAge()).
+                queryParam("customerRequest", customer.getRequest());
 
         HttpEntity<Boolean> response = restTemp.exchange(builder.toUriString(),
                 HttpMethod.POST, null, Boolean.class);

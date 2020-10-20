@@ -9,11 +9,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class OrderService {
-    public Order createOrder(int amount)
+    public Order createOrder(String directorName, int woodAmount, int balance, String customerName, int customerAge, int customerRequest)
     {
-        return new Order(amount);
+        return new Order(directorName,woodAmount,balance,customerName,customerAge,customerRequest);
     }
-
     public void setCustomer(Order order, Customer customer)
     {
         order.setCustomer(customer);
@@ -22,7 +21,7 @@ public class OrderService {
 
     public Order decisionMaking(Director director, Customer customer)
     {
-        Order order = createOrder(customer.getRequest());
+        Order order = createOrder(director.getName(), director.getWoodAmount(),director.getBalance(),customer.getName(),customer.getAge(),customer.getRequest());
         if (director.getWoodAmount() < customer.getRequest())
         {
             System.out.println("In decision making, rejected version");
